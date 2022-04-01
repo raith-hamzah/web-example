@@ -14,7 +14,7 @@ export function* fetchCountries() {
       yield put(actions.fetchCountriesError('No countries found.'));
     }
   } catch (err) {
-    yield put(actions.fetchCountriesError(err.toString()));
+    yield put(actions.fetchCountriesError((err as any).toString()));
   }
 }
 
